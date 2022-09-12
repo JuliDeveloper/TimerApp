@@ -9,7 +9,6 @@ import SwiftUI
 
 struct StarterView: View {
     
-    @EnvironmentObject private var user : UserManager
     @EnvironmentObject private var storageManager: StorageManager
     
     var body: some View {
@@ -26,6 +25,6 @@ struct StarterView: View {
 struct StarterView_Previews: PreviewProvider {
     static var previews: some View {
         StarterView()
-            .environmentObject(UserManager())
+            .environmentObject(StorageManager())
     }
 }
