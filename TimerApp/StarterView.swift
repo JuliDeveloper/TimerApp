@@ -10,10 +10,11 @@ import SwiftUI
 struct StarterView: View {
     
     @EnvironmentObject private var user : UserManager
+    @EnvironmentObject private var storageManager: StorageManager
     
     var body: some View {
         Group {
-            if user.isLogin {
+            if storageManager.isLogin {
                 ContentView()
             } else {
                 LoginView()

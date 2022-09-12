@@ -13,6 +13,7 @@ struct LoginView: View {
     @State var countWords: Int = 0
     
     @EnvironmentObject private var user: UserManager
+    @EnvironmentObject private var storageManager: StorageManager
     
     var body: some View {
         VStack(spacing: 20) {
@@ -40,6 +41,8 @@ struct LoginView: View {
         if !userName.isEmpty && userName.count > 2 {
             user.name = userName
             user.isLogin.toggle()
+            storageManager.userName = user.name
+            storageManager.isLogin = user.isLogin
         }
     }
 }

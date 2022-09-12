@@ -11,10 +11,11 @@ struct ContentView: View {
     
     @StateObject private var timer = TimeCounter()
     @EnvironmentObject private var userManager: UserManager
+    @EnvironmentObject private var storageManger: StorageManager
         
     var body: some View {
         VStack {
-            Text("Hi, \(userManager.name)")
+            Text("Hi, \(storageManger.userName)")
                 .padding(.top, 100)
                 .font(.largeTitle)
             Text("\(timer.counter)")
