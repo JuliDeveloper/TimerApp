@@ -13,6 +13,7 @@
 		2554C0A328CF8A7000703D77 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2554C0A228CF8A7000703D77 /* Preview Assets.xcassets */; };
 		2554C0AA28CF8D9000703D77 /* ButtonCounter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2554C0A928CF8D9000703D77 /* ButtonCounter.swift */; };
 		2554C0AC28CF8F8900703D77 /* TimeCounter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2554C0AB28CF8F8900703D77 /* TimeCounter.swift */; };
+		2554C0AE28CF950300703D77 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2554C0AD28CF950300703D77 /* LoginView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		2554C0A228CF8A7000703D77 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		2554C0A928CF8D9000703D77 /* ButtonCounter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonCounter.swift; sourceTree = "<group>"; };
 		2554C0AB28CF8F8900703D77 /* TimeCounter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeCounter.swift; sourceTree = "<group>"; };
+		2554C0AD28CF950300703D77 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 			children = (
 				2554C09B28CF8A6F00703D77 /* TimerAppApp.swift */,
 				2554C09D28CF8A6F00703D77 /* ContentView.swift */,
+				2554C0AD28CF950300703D77 /* LoginView.swift */,
 				2554C0AB28CF8F8900703D77 /* TimeCounter.swift */,
 				2554C0A928CF8D9000703D77 /* ButtonCounter.swift */,
 				2554C09F28CF8A7000703D77 /* Assets.xcassets */,
@@ -146,6 +149,7 @@
 				2554C0AA28CF8D9000703D77 /* ButtonCounter.swift in Sources */,
 				2554C09E28CF8A6F00703D77 /* ContentView.swift in Sources */,
 				2554C09C28CF8A6F00703D77 /* TimerAppApp.swift in Sources */,
+				2554C0AE28CF950300703D77 /* LoginView.swift in Sources */,
 				2554C0AC28CF8F8900703D77 /* TimeCounter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
