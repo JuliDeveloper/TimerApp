@@ -18,18 +18,18 @@ struct ButtonCounter: View {
                 .fontWeight(.bold)
         }
         .frame(width: 200, height: 50)
-        .background(.orange)
+        .background(.green)
         .foregroundColor(.white)
         .cornerRadius(10)
         .overlay(
             RoundedRectangle(cornerRadius: 10)
-                .stroke(.gray, lineWidth: 4)
+                .stroke(.blue, lineWidth: 4)
         )
     }
 }
 
 struct ButtonCounter_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ButtonCounter(timer: TimeCounter())
     }
 }
