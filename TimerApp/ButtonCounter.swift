@@ -8,10 +8,12 @@
 import SwiftUI
 
 struct ButtonCounter: View {
+    
+    @ObservedObject var timer: TimeCounter
         
     var body: some View {
-        Button(action: {  }) {
-            Text("Start")
+        Button(action: { timer.startTimer() }) {
+            Text(timer.buttonTitle)
                 .font(.title)
                 .fontWeight(.bold)
         }

@@ -8,14 +8,16 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @StateObject private var timer = TimeCounter()
         
     var body: some View {
         VStack {
-            Text("3")
+            Text("\(timer.counter)")
                 .padding(.top, 100)
                 .font(.largeTitle)
             Spacer()
-            ButtonCounter()
+            ButtonCounter(timer: timer)
             Spacer()
         }
     }
