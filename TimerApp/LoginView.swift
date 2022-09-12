@@ -10,6 +10,7 @@ import SwiftUI
 struct LoginView: View {
     
     @State var userName: String = ""
+    @EnvironmentObject private var user: UserManager
     
     var body: some View {
         VStack(spacing: 20) {
@@ -25,7 +26,10 @@ struct LoginView: View {
     }
     
     private func loginUser() {
-        
+        if !userName.isEmpty {
+            user.name = userName
+            user.isLogin.toggle()
+        }
     }
 }
 
