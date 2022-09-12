@@ -17,6 +17,7 @@
 		2554C0B028CF96E300703D77 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2554C0AF28CF96E300703D77 /* UserManager.swift */; };
 		2554C0B228CF985B00703D77 /* StarterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2554C0B128CF985B00703D77 /* StarterView.swift */; };
 		2554C0B428CFB49500703D77 /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2554C0B328CFB49500703D77 /* StorageManager.swift */; };
+		2554C0B628CFBAD600703D77 /* ButtonLogOut.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2554C0B528CFBAD600703D77 /* ButtonLogOut.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		2554C0AF28CF96E300703D77 /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
 		2554C0B128CF985B00703D77 /* StarterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarterView.swift; sourceTree = "<group>"; };
 		2554C0B328CFB49500703D77 /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
+		2554C0B528CFBAD600703D77 /* ButtonLogOut.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonLogOut.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +73,7 @@
 				2554C0AF28CF96E300703D77 /* UserManager.swift */,
 				2554C0AB28CF8F8900703D77 /* TimeCounter.swift */,
 				2554C0A928CF8D9000703D77 /* ButtonCounter.swift */,
+				2554C0B528CFBAD600703D77 /* ButtonLogOut.swift */,
 				2554C09F28CF8A7000703D77 /* Assets.xcassets */,
 				2554C0A128CF8A7000703D77 /* Preview Content */,
 			);
@@ -159,6 +162,7 @@
 				2554C0B028CF96E300703D77 /* UserManager.swift in Sources */,
 				2554C0AA28CF8D9000703D77 /* ButtonCounter.swift in Sources */,
 				2554C09E28CF8A6F00703D77 /* ContentView.swift in Sources */,
+				2554C0B628CFBAD600703D77 /* ButtonLogOut.swift in Sources */,
 				2554C09C28CF8A6F00703D77 /* TimerAppApp.swift in Sources */,
 				2554C0AE28CF950300703D77 /* LoginView.swift in Sources */,
 				2554C0AC28CF8F8900703D77 /* TimeCounter.swift in Sources */,

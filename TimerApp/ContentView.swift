@@ -24,7 +24,14 @@ struct ContentView: View {
             Spacer()
             ButtonCounter(timer: timer)
             Spacer()
+            ButtonLogOut(action: logOut)
+                .padding(.bottom, 20)
         }
+    }
+    
+    private func logOut() {
+        storageManger.userName = ""
+        storageManger.isLogin.toggle()
     }
 }
 
@@ -32,5 +39,6 @@ struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
             .environmentObject(UserManager())
+            .environmentObject(StorageManager())
     }
 }
