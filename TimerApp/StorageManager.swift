@@ -5,18 +5,29 @@
 //  Created by Julia Romanenko on 12.09.2022.
 //
 
-import Foundation
+import SwiftUI
 
 class StorageManager: ObservableObject {
-    @Published var userName: String = (UserDefaults.standard.string(forKey: "userName") ?? "") {
-        didSet {
-            UserDefaults.standard.set(userName, forKey: "userName")
-        }
+    
+    static let shared = StorageManager()
+    
+    @AppStorage("user") private var userData: Data?
+    
+    private init() {}
+    
+    func save(user: User) {
+        userData = try? JSONEncoder().encode(user)
     }
     
-    @Published var isLogin: Bool = (UserDefaults.standard.bool(forKey: "isLogin")) {
-        didSet {
-            UserDefaults.standard.set(isLogin, forKey: "isLogin")
-        }
+    func loadUser() -> User {
+        guard let user = try? JSONDecoder().decode(User.self, from: userData ?? Data()) else { return User() }
+        return user
     }
+    
+    func clean(userManager: UserManager) {
+        userManager.user.isLogin = false
+        userManager.user.name = ""
+        userData = nil
+    }
+    
 }
