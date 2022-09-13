@@ -14,7 +14,7 @@ struct StarterView: View {
     var body: some View {
         Group {
             if userManager.user.isLogin {
-                ContentView()
+                TimerView()
             } else {
                 LoginView()
             }
