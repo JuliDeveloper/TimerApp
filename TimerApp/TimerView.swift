@@ -21,7 +21,7 @@ struct TimerView: View {
                 .padding(.top, 100)
                 .font(.largeTitle)
             Spacer()
-            ButtonView(title: "\(timer.counter)", color: .green) {
+            ButtonView(title: "\(timer.buttonTitle)", color: .green) {
                 timer.startTimer()
             }
             Spacer()
