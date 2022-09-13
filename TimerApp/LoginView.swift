@@ -9,20 +9,18 @@ import SwiftUI
 
 struct LoginView: View {
     
-    @State var userName: String = ""
     @State var countWords: Int = 0
     
-    @EnvironmentObject private var user: UserManager
-    @EnvironmentObject private var storageManager: StorageManager
+    @EnvironmentObject private var userManager: UserManager
     
     var body: some View {
         VStack(spacing: 20) {
             HStack {
-                TextField("Enter your name...", text: $userName)
+                TextField("Enter your name...", text: $userManager.user.name)
                     .multilineTextAlignment(.center)
                 Text("\(countWords)")
                     .foregroundColor(countWords < 3 ? .red : .green)
-                    .onChange(of: userName.count) { newValue in
+                    .onChange(of: userManager.user.name.count) { newValue in
                         countWords = newValue
                     }
             }
@@ -33,16 +31,14 @@ struct LoginView: View {
                     Text("OK")
                 }
             }
-            .disabled(countWords < 3 ? true : false)
+            .disabled(!userManager.nameIsValid)
         }
     }
     
     private func loginUser() {
-        if !userName.isEmpty && userName.count > 2 {
-            user.name = userName
-            user.isLogin.toggle()
-            storageManager.userName = user.name
-            storageManager.isLogin = user.isLogin
+        if !userManager.user.name.isEmpty {
+            userManager.user.isLogin.toggle()
+            StorageManager.shared.save(user: userManager.user)
         }
     }
 }
@@ -51,6 +47,5 @@ struct LoginView_Previews: PreviewProvider {
     static var previews: some View {
         LoginView()
             .environmentObject(UserManager())
-            .environmentObject(StorageManager())
     }
 }
