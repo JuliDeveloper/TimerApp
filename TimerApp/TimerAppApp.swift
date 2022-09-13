@@ -10,14 +10,12 @@ import SwiftUI
 @main
 struct TimerAppApp: App {
     
-    @StateObject private var userManager = UserManager()
-    @StateObject private var storageManager = StorageManager()
+    private let user = StorageManager.shared.loadUser()
     
     var body: some Scene {
         WindowGroup {
             StarterView()
-                .environmentObject(userManager)
-                .environmentObject(storageManager)
+                .environmentObject(UserManager(user: user))
         }
     }
 }
