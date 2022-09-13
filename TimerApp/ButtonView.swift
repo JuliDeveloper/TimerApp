@@ -1,5 +1,5 @@
 //
-//  ButtonCounter.swift
+//  ButtonView.swift
 //  TimerApp
 //
 //  Created by Julia Romanenko on 12.09.2022.
@@ -7,18 +7,20 @@
 
 import SwiftUI
 
-struct ButtonCounter: View {
+struct ButtonView: View {
     
-    @ObservedObject var timer: TimeCounter
-        
+    let title: String
+    let color: Color
+    let action: () -> Void
+    
     var body: some View {
-        Button(action: { timer.startTimer() }) {
-            Text(timer.buttonTitle)
+        Button(action: action) {
+            Text(title)
                 .font(.title)
                 .fontWeight(.bold)
         }
         .frame(width: 200, height: 50)
-        .background(.green)
+        .background(color)
         .foregroundColor(.white)
         .cornerRadius(10)
         .overlay(
@@ -30,6 +32,6 @@ struct ButtonCounter: View {
 
 struct ButtonCounter_Previews: PreviewProvider {
     static var previews: some View {
-        ButtonCounter(timer: TimeCounter())
+        ButtonView(title: "Hi", color: .red, action: {})
     }
 }

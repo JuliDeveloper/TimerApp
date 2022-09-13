@@ -21,9 +21,13 @@ struct TimerView: View {
                 .padding(.top, 100)
                 .font(.largeTitle)
             Spacer()
-            ButtonCounter(timer: timer)
+            ButtonView(title: "\(timer.counter)", color: .green) {
+                timer.startTimer()
+            }
             Spacer()
-            ButtonLogOut(action: StorageManager.shared.clean(userManager: userManager.user))
+            ButtonView(title: "LogOut", color: .red, action: {
+                StorageManager.shared.clean(userManager: userManager)
+            })
                 .padding(.bottom, 20)
         }
     }
